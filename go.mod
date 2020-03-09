@@ -1,4 +1,4 @@
-module github.com/MohammadrezaJafari/term-frequency
+module github.com/MohammadrezaJafari/termfrequency
 
 go 1.13
 

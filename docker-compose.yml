@@ -15,11 +15,11 @@ services:
   term-frequency:
     build:
       context: .
-    working_dir: /go/src/term-frequency
+    working_dir: /go/src/termfrequency
     networks:
       - backend
     volumes:
-      - .:/go/src/term-frequency
+      - .:/go/src/termfrequency
     ports:
       - "8080:80"
     command: ["sh", "-c", "watcher"]
