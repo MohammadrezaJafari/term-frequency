@@ -1,0 +1,27 @@
+version: '3'
+
+networks:
+  backend:
+    driver: bridge
+services:
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - ~/.laradock/data/mongo:/data/db
+    networks:
+      - backend
+  term-frequency:
+    build:
+      context: .
+    working_dir: /go/src/term-frequency
+    networks:
+      - backend
+    volumes:
+      - .:/go/src/term-frequency
+    ports:
+      - "8080:80"
+    command: ["sh", "-c", "watcher"]
+  mariadb:
+    image: laradock_mariadb
