@@ -2,6 +2,6 @@ package http
 
 import "fmt"
 
-func main() {
+func SayHello() {
 	fmt.Println("Hello Server")
 }
