@@ -1,4 +1,4 @@
-module gitlab.snapp.ir/mohammadreza.jafari/term-frequency
+module github.com/MohammadrezaJafari/term-frequency
 
 go 1.13
 
